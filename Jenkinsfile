@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/veerababuteki/Icognito.ai.git'
-            }
-        }
-
         stage('Set Up Python Environment') {
             steps {
                 sh '''
