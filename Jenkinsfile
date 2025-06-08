@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/veerababuteki/Icognito.ai/new/main'
+                git  'https://github.com/veerababuteki/Icognito.ai.git'
+'
             }
         }
 
