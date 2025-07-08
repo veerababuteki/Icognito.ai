@@ -448,7 +448,7 @@ class SubmitBusiness(Resource):
                 logger.exception(f"Unexpected error during onboarding: {str(e)}")
                 return {"error": f"Error during onboarding: {str(e)}"}, 500
 
-            ask_url = f"http://localhost:5001/ask?id={dname}"
+            ask_url = f"https://api.iicl.in/ask?id={dname}"
             logger.info(f"Ask URL generated: {ask_url}")
 
             return jsonify({

@@ -10288,3 +10288,30 @@ ValueError: No documents found to embed.
  * Running on http://127.0.0.1:5001
  * Running on http://192.168.0.74:5001
 2025-06-06 15:02:20,867 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:04:11,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.11:5001
+2025-07-08 15:04:11,697 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-08 15:05:59,265 - INFO - POST /submit endpoint hit.
+2025-07-08 15:05:59,266 - INFO - Request JSON parsed successfully.
+2025-07-08 15:05:59,266 - INFO - Received data - name: Redington, website: https://redingtongroup.com/red-ai/, descp: True
+2025-07-08 15:05:59,267 - INFO - Configuration saved to conf_redingtongroup_com.json.
+2025-07-08 15:05:59,267 - INFO - Starting async onboarding for Redington (https://redingtongroup.com/red-ai/)
+2025-07-08 15:05:59,269 - INFO - Created/confirmed folder: Redington
+2025-07-08 15:05:59,270 - INFO - Creating directory: redingtongroup.com
+2025-07-08 15:09:59,282 - INFO - Returning existing access URL: http://incognitochat.s3-website-us-east-1.amazonaws.com/?id=redingtongroup_com
+2025-07-08 15:09:59,284 - INFO - Onboarding completed successfully.
+2025-07-08 15:09:59,285 - INFO - Ask URL generated: http://localhost:5001/ask?id=redingtongroup_com
+2025-07-08 15:09:59,288 - INFO - 127.0.0.1 - - [08/Jul/2025 15:09:59] "POST /submit_business HTTP/1.1" 200 -
+2025-07-08 15:46:10,426 - INFO - POST /submit endpoint hit.
+2025-07-08 15:46:10,427 - INFO - Request JSON parsed successfully.
+2025-07-08 15:46:10,428 - INFO - Received data - name: SemiASMPT, website: https://semi.asmpt.com/en/, descp: True
+2025-07-08 15:46:10,431 - INFO - Configuration saved to conf_semi_asmpt_com.json.
+2025-07-08 15:46:10,431 - INFO - Starting async onboarding for SemiASMPT (https://semi.asmpt.com/en/)
+2025-07-08 15:46:10,437 - INFO - Created/confirmed folder: SemiASMPT
+2025-07-08 15:46:10,440 - INFO - Creating directory: semi.asmpt.com
+2025-07-08 15:50:10,447 - INFO - Returning existing access URL: http://incognitochat.s3-website-us-east-1.amazonaws.com/?id=semi_asmpt_com
+2025-07-08 15:50:10,451 - INFO - Onboarding completed successfully.
+2025-07-08 15:50:10,453 - INFO - Ask URL generated: http://localhost:5001/ask?id=semi_asmpt_com
+2025-07-08 15:50:10,457 - INFO - 127.0.0.1 - - [08/Jul/2025 15:50:10] "POST /submit_business HTTP/1.1" 200 -

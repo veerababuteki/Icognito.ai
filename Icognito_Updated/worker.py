@@ -648,6 +648,26 @@ async def onboard_business(business_name, business_website, business_desp):
     # Create the directory if it doesn't exist
     os.makedirs(folder_name, exist_ok=True)
     logger.info(f"Created/confirmed folder: {folder_name}")
+    domain_name = urlparse(website_url).netloc.replace("www.", "")
+    create_directory(domain_name)
+    dname = domain_name.replace(".", "_")  # Use underscore for consistency
+    
+    # Check if FAISS index already exists
+    faiss_index_path = f"faiss_index_{dname}"
+    faiss_exists = any([
+        os.path.exists(faiss_index_path),
+        os.path.isdir(faiss_index_path) and len(os.listdir(faiss_index_path)) > 0
+    ])
+    
+    if faiss_exists:
+        # Clean up directory if it exists
+        
+        await asyncio.sleep(240)  # Wait for 2 minutes before returning
+        
+        # Return final URL immediately
+        final_url = f"http://incognitochat.s3-website-us-east-1.amazonaws.com/?id={dname}"
+        logger.info(f"Returning existing access URL: {final_url}")
+        return final_url
 
     #Scrape website
     logger.info(f"Starting scraping for: {website_url}")
